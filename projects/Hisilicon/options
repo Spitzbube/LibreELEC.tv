@@ -1,0 +1,49 @@
+################################################################################
+# setup system defaults
+################################################################################
+
+  # Kernel to use. values can be:
+  # default:  default mainline kernel
+    LINUX="${LINUX:-hisilicon-4.4}"
+
+
+#
+TARGET_CPU="cortex-a9"
+
+  # Bootloader to use (syslinux / u-boot / atv-bootloader / bcm2835-bootloader)
+    BOOTLOADER="u-boot"
+
+  # u-boot version to use (default)
+    UBOOT_VERSION="vendor"
+
+  # Kernel target
+    KERNEL_TARGET="zImage-dtb"
+
+  # additional drivers to install:
+  # for a list of additinoal drivers see packages/linux-drivers
+  # Space separated list is supported,
+  # e.g. ADDITIONAL_DRIVERS="DRIVER1 DRIVER2"
+    ADDITIONAL_DRIVERS=""
+
+  # additional Firmware to use (dvb-firmware, misc-firmware, wlan-firmware)
+  # Space separated list is supported,
+  # e.g. FIRMWARE="dvb-firmware misc-firmware wlan-firmware"
+    FIRMWARE=""
+
+################################################################################
+# setup project defaults
+################################################################################
+
+  # Displayserver to use (weston / no)
+    DISPLAYSERVER="no"
+
+  # Xorg Graphic drivers to use (all / i915,i965,r200,r300,r600,nvidia)
+  # Space separated list is supported,
+  # e.g. GRAPHIC_DRIVERS="i915 i965 r300 r600 radeonsi nvidia"
+    GRAPHIC_DRIVERS=""
+
+# Mediacenter to use (kodi / no)
+  MEDIACENTER="no"
+
+# build and install Avahi (Zeroconf) daemon (yes / no)
+  AVAHI_DAEMON="no"

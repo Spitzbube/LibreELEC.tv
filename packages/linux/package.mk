@@ -55,6 +55,12 @@ case "$LINUX" in
     PKG_URL="https://github.com/rockchip-linux/kernel/archive/$PKG_VERSION.tar.gz"
     PKG_SOURCE_DIR="kernel-$PKG_VERSION"
     ;;
+  hisilicon-4.4)
+    PKG_VERSION="4.4.35"
+    PKG_URL="http://source.mynonpublic.com/dinobot/dinobot-$PKG_NAME-$PKG_VERSION-20171018.tar.gz"
+    PKG_SOURCE_DIR="linux-$PKG_VERSION"
+    PKG_BUILD_PERF="no"
+    ;;
   raspberrypi)
     PKG_VERSION="db81c14ce9fbd705c2d3936edecbc6036ace6c05" # 4.14.54
     PKG_SHA256="ae553b2deb6854646e56369cab57d3018bca2056b2ca2752c5e051093968635e"
